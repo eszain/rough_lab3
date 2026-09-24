@@ -36,7 +36,7 @@ All claims within Sprint 0 were audited to separate documented evidence from ana
 
 ## 3. Candidate-Requirement Revisions
 
-The following six candidate requirements were rewritten to resolve critical issues of atomicity, clarity, scope, and premature design.
+The following seven candidate requirements were rewritten to resolve critical issues of atomicity, clarity, scope, premature design, and operational triage prioritization.
 
 ### Revision 1: R5 – Online Lost-Item Submission (Resolved Atomicity)
 - **Before:** *"The system shall provide an online form allowing passengers to submit lost reports with category, brand, photos, automatically generate a tracking number, and send an email receipt."*
@@ -67,6 +67,13 @@ The following six candidate requirements were rewritten to resolve critical issu
 ### Revision 6: R11 – Public Catalog (Resolved Ambiguous Scope/Privacy)
 - **Before:** *"The system shall publish a searchable catalog of found items with photo thumbnails, category, location, and date found."*
 - **After (Privacy-Bounded):** *"The system shall publish a searchable catalog of found items that explicitly redacts uniquely identifying features (e.g., serial numbers, custom engravings, detailed contents) to prevent fraudulent claims."*
+
+### Revision 7: R3 / R8 – Priority Categorization for Urgent Property (Resolved Scope & Operational Triage)
+- **Before (Uniform Treatment / Scope Blindspot):** *"The system shall queue all lost-item reports and found-item records in a single standard FIFO verification pipeline regardless of item category or urgency."*
+- **After (Differentiated Priority & Triage):**
+  - **R3.1 (Urgent Property Classification):** *"The system shall categorize high-impact personal essentials (e.g., smartphones, laptops, medical devices, government-issued IDs, wallets) as high-priority items upon intake or loss reporting."*
+  - **R3.2 (Expedited Verification Triage):** *"The system shall prioritize high-priority items at the top of staff verification queues and trigger rapid matching alerts to facilitate expedited recovery before standard 24–48 hour batch processing."*
+
 
 ---
 
