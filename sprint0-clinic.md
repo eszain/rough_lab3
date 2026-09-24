@@ -12,10 +12,8 @@ This document is the formal Sprint 0 clinic checkpoint. It provides an expanded 
 
 The initial system boundary and stakeholder map omitted important organizational details. The following two major corrections were applied:
 
-1. **Addition of Privacy & Legal Compliance Officer (MFIPPA / IPC):**
-   - *Correction:* Formally added to the stakeholder map. The initial model treated claimant data (names, IDs, phone numbers) as standard inventory data. The correction acknowledges that the system must comply with the Municipal Freedom of Information and Protection of Privacy Act (MFIPPA), requiring automated data anonymization and strict retention periods for PII.
-2. **Addition of Station Customer Service Agents (CSAs) as Intermediate Custodians:**
-   - *Correction:* The original model assumed items jumped directly from "Found by Passenger/Operator" to "Central Staff at Bay Station". The correction adds Station CSAs at fare booths as frontline intake points, requiring the system to handle intermediate, temporary custody logs before physical courier transport to the central hub.
+1. Formally added a Privacy & Legal Compliance Officer (MFIPPA / IPC) to the stakeholder map. The initial model treated claimant data (names, IDs, phone numbers) as standard inventory data. The system must comply with the Municipal Freedom of Information and Protection of Privacy Act (MFIPPA), requiring automated data anonymization and strict retention periods for PII.
+2. Added Station Customer Service Agents (CSAs) as intermediate custodians. The original model assumed items jumped directly from "Found by Passenger/Operator" to "Central Staff at Bay Station". Station CSAs at fare booths act as frontline intake points, requiring the system to handle intermediate, temporary custody logs before physical courier transport to the central hub.
 
 ---
 
@@ -79,10 +77,10 @@ The following seven candidate requirements were rewritten to resolve issues of a
 
 ## 4. Unresolved Questions
 
-1.  **Work Rules**: Does the Amalgamated Transit Union (ATU Local 113) collective agreement permit vehicle operators to log items on mobile devices during shift turnarounds, or must logging occur exclusively at depot desktop terminals?
-2. **Delivery Liability:** If a high-value item (e.g., laptop) is lost or damaged in transit by the third-party courier, who bears the legal and financial liability?
-3. **CAD/AVL Latency:** What is the exact API protocol and data refresh latency supported by the transit authority's internal vehicle dispatch system?
-4. **Station CSA Custody:** Do subway Station CSAs have secure lockboxes capable of holding large items (e.g., bicycles, large luggage) temporarily, or must such items bypass the booth?
-5. **Hazardous / Perishable Items:** What is the operational protocol and system disposition state for items deemed perishable (food) or hazardous (leaking batteries) upon intake?
-6. **Gateway Redundancy:** If the primary payment gateway is offline, what is the fallback mechanism for processing delivery fees?
-7. **AODA Accessibility:** What specific WCAG compliance level (e.g., AA or AAA) is mandated by the transit agency for the public-facing claimant portal under the Accessibility for Ontarians with Disabilities Act (AODA)?
+1. Does the Amalgamated Transit Union (ATU Local 113) collective agreement permit vehicle operators to log items on mobile devices during shift turnarounds, or must logging occur exclusively at depot desktop terminals?
+2. If a high-value item (e.g., laptop) is lost or damaged in transit by the third-party courier, who bears the legal and financial liability?
+3. What is the exact API protocol and data refresh latency supported by the transit authority's internal vehicle dispatch system?
+4. Do subway Station CSAs have secure lockboxes capable of holding large items (e.g., bicycles, large luggage) temporarily, or must such items bypass the booth?
+5. What is the operational protocol and system disposition state for items deemed perishable (food) or hazardous (leaking batteries) upon intake?
+6. If the primary payment gateway is offline, what is the fallback mechanism for processing delivery fees?
+7. What specific WCAG compliance level (e.g., AA or AAA) is mandated by the transit agency for the public-facing claimant portal under the Accessibility for Ontarians with Disabilities Act (AODA)?
