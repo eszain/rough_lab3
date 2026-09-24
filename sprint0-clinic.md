@@ -72,7 +72,7 @@ The following six candidate requirements were rewritten to resolve critical issu
 
 ## 4. Unresolved Questions for Sprint 1 (Expanded List)
 
-1. **Union Work Rules:** Does the Amalgamated Transit Union (ATU Local 113) collective agreement permit vehicle operators to log items on mobile devices during shift turnarounds, or must logging occur exclusively at depot desktop terminals?
+1.  **Work Rules**: Does the Amalgamated Transit Union (ATU Local 113) collective agreement permit vehicle operators to log items on mobile devices during shift turnarounds, or must logging occur exclusively at depot desktop terminals?
 2. **Delivery Liability:** If a high-value item (e.g., laptop) is lost or damaged in transit by the third-party courier, who bears the legal and financial liability?
 3. **MFIPPA Retention:** What is the maximum lawful retention window for claimant-uploaded personal photos containing identifiable faces/backgrounds once a claim is closed?
 4. **CAD/AVL Latency:** What is the exact API protocol and data refresh latency supported by the transit authority's internal vehicle dispatch system?
