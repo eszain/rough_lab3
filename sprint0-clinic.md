@@ -10,7 +10,7 @@ This document serves as the formal Sprint 0 clinic checkpoint. It goes beyond th
 
 ## 1. Stakeholder & Context Corrections 
 
-The initial system boundary and stakeholder map omitted critical organizational complexities. The following **three** major corrections were applied:
+The initial system boundary and stakeholder map omitted critical organizational complexities. The following **two** major corrections were applied:
 
 1. **Addition of Privacy & Legal Compliance Officer (MFIPPA / IPC):**
    - *Correction:* Formally added to the stakeholder map. The initial model treated claimant data (names, IDs, phone numbers) as standard inventory data. The correction acknowledges that the system must comply with the Municipal Freedom of Information and Protection of Privacy Act (MFIPPA), requiring automated data anonymization and strict retention periods for PII.
