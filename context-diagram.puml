@@ -1,0 +1,113 @@
+@startuml "Public Transit Lost & Found System - Context Diagram"
+
+!define SYSTEM_COLOR #4a90d9
+!define ACTOR_COLOR #f5a623
+!define EXTERNAL_COLOR #7ed321
+
+title Public Transit Lost & Found System
+skinparam nodesep 80
+skinparam ranksep 110
+skinparam linetype ortho
+
+' ── Styling ─────────────────────────────────────────────
+
+skinparam rectangle {
+  BackgroundColor SYSTEM_COLOR
+  FontColor White
+  BorderColor #2c5f8a
+  RoundCorner 15
+}
+
+skinparam component {
+  BackgroundColor #e8f4fd
+  BorderColor #4a90d9
+  FontColor #2c3e50
+}
+
+skinparam cloud {
+  BackgroundColor #f0f0f0
+  BorderColor #999999
+}
+
+skinparam actor {
+  BackgroundColor ACTOR_COLOR
+  BorderColor #c47d12
+}
+
+' ── Actors (Top Row) ────────────────────────────────────
+
+actor "Passenger\n(Claimant)" as Passenger
+actor "Transit Operator\n(Frontline Staff)" as Operator
+actor "Lost & Found Staff\n(Claims Officer)" as LFStaff
+actor "Transit Management\n(Administration)" as Management
+
+' Moderate horizontal spacing between stakeholders
+Passenger -[hidden]right---> Operator
+Operator -[hidden]right---> LFStaff
+LFStaff -[hidden]right---> Management
+
+' ── System Under Consideration ──────────────────────────
+
+rectangle "Public Transit Lost & Found System" <<System>> as System {
+  
+  ' Row 1
+  component "Status Tracking\n& Notifications" as Tracking
+  component "Item Reporting\nModule" as Reporting
+  component "Matching\nEngine" as Matching
+
+  ' Row 2
+  component "Storage\nManagement" as Storage
+  component "Verification\nWorkflow" as Verification
+  component "Audit\nLogging" as Audit
+  component "Admin\nDashboard" as Admin
+  
+  ' Aligning the components into two rows
+  Tracking -[hidden]right---> Reporting
+  Reporting -[hidden]right---> Matching
+  
+  Storage -[hidden]right---> Verification
+  Verification -[hidden]right---> Audit
+  Audit -[hidden]right---> Admin
+  
+  Tracking -[hidden]down---> Storage
+  Reporting -[hidden]down---> Verification
+  Matching -[hidden]down---> Audit
+}
+
+' ── External Systems (Bottom Row) ───────────────────────
+
+cloud "Email / SMS\nNotification Gateway" as EmailSMS
+cloud "Authentication\nProvider" as Auth
+cloud "Delivery Partner\nAPI (optional)" as Delivery
+
+EmailSMS -[hidden]right---> Auth
+Auth -[hidden]right---> Delivery
+
+' ── Interactions ────────────────────────────────────────
+
+' Passenger Interactions
+' Using 3 dashes (--->) for moderate arrow length
+Passenger -down---> Reporting : "Submits lost-item report\n& browses catalog"
+Tracking -up---> Passenger : "Sends tracking code\n& status notifications"
+Passenger -down---> Tracking : "Checks claim status"
+
+' Operator Interactions
+Operator -down---> Reporting : "Logs found item"
+Reporting -up---> Operator : "Submission confirmation"
+
+' LF Staff Interactions
+Matching -up---> LFStaff : "Flags match\ncandidates"
+LFStaff -down---> Verification : "Verifies claims &\napproves returns"
+LFStaff -down---> Storage : "Assigns/updates\nstorage location"
+
+' Management Interactions
+Management -down---> Admin : "Configures policies"
+Admin -up---> Management : "Reports & audit logs"
+
+' External Systems Interactions
+Tracking -down---> EmailSMS : "Sends notification\nmessages"
+Admin -down---> Auth : "Authenticates staff\n& management"
+Verification -down---> Delivery : "Dispatches shipment\nrequest (optional)"
+Delivery -up---> Verification : "Returns delivery\nconfirmation (optional)"
+
+@enduml
