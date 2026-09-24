@@ -74,7 +74,6 @@ The following six candidate requirements were rewritten to resolve critical issu
 
 1.  **Work Rules**: Does the Amalgamated Transit Union (ATU Local 113) collective agreement permit vehicle operators to log items on mobile devices during shift turnarounds, or must logging occur exclusively at depot desktop terminals?
 2. **Delivery Liability:** If a high-value item (e.g., laptop) is lost or damaged in transit by the third-party courier, who bears the legal and financial liability?
-3. **MFIPPA Retention:** What is the maximum lawful retention window for claimant-uploaded personal photos containing identifiable faces/backgrounds once a claim is closed?
 4. **CAD/AVL Latency:** What is the exact API protocol and data refresh latency supported by the transit authority's internal vehicle dispatch system?
 5. **Station CSA Custody:** Do subway Station CSAs have secure lockboxes capable of holding large items (e.g., bicycles, large luggage) temporarily, or must such items bypass the booth?
 6. **Hazardous / Perishable Items:** What is the operational protocol and system disposition state for items deemed perishable (food) or hazardous (leaking batteries) upon intake?
