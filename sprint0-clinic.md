@@ -8,7 +8,7 @@ This document serves as the formal Sprint 0 clinic checkpoint. It goes beyond th
 
 ---
 
-## 1. Stakeholder & Context Corrections (Expanded)
+## 1. Stakeholder & Context Corrections 
 
 The initial system boundary and stakeholder map omitted critical organizational complexities. The following **three** major corrections were applied:
 
@@ -19,7 +19,7 @@ The initial system boundary and stakeholder map omitted critical organizational 
 
 ---
 
-## 2. Evidence Discipline Audit (8-Claim Review)
+## 2. Evidence Discipline Audit 
 
 All claims within Sprint 0 were audited to separate documented evidence from analogies, simulations, and team assumptions.
 
@@ -34,7 +34,7 @@ All claims within Sprint 0 were audited to separate documented evidence from ana
 
 ---
 
-## 3. Candidate-Requirement Revisions (6 Items)
+## 3. Candidate-Requirement Revisions
 
 The following six candidate requirements were rewritten to resolve critical issues of atomicity, clarity, scope, and premature design.
 
@@ -70,7 +70,7 @@ The following six candidate requirements were rewritten to resolve critical issu
 
 ---
 
-## 4. Unresolved Questions for Sprint 1 (Expanded List)
+## 4. Unresolved Questions
 
 1.  **Work Rules**: Does the Amalgamated Transit Union (ATU Local 113) collective agreement permit vehicle operators to log items on mobile devices during shift turnarounds, or must logging occur exclusively at depot desktop terminals?
 2. **Delivery Liability:** If a high-value item (e.g., laptop) is lost or damaged in transit by the third-party courier, who bears the legal and financial liability?
