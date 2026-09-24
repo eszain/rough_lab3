@@ -17,4 +17,5 @@ This folder contains the Sprint 0 deliverables defining the problem scope, stake
 - **[Requirements Backlog](requirements-backlog.md)**: 20 candidate user stories and functional/non-functional requirements with initial priority rankings.
 - **[GitHub Issues Template / Plan](github-issues.md)**: Structured issue templates and backlog setup for repository tracking.
 - **[Lab 3 Sprint 0 Clinic](lab3.md)**: Complete Lab 3 deliverable answering Activities A, B, C, D, evidence audit, and candidate requirement clinic.
+- **[Sprint 0 Clinic Checkpoint](sprint0-clinic.md)**: Expanded clinic deliverables including 4 stakeholder corrections, 8-claim evidence audit, 6 requirement revisions, and 8 unresolved questions.
 
