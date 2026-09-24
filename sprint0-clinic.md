@@ -4,13 +4,13 @@
 **Project:** Public Transit Lost & Found System (TLFS)  
 **Deliverable:** `sprint0-clinic.md`
 
-This document serves as the formal Sprint 0 clinic checkpoint. It goes beyond the minimum requirements by providing an expanded set of context corrections, an augmented evidence audit, additional requirement revisions, and a comprehensive list of unresolved questions.
+This document is the formal Sprint 0 clinic checkpoint. It provides an expanded set of context corrections, an augmented evidence audit, additional requirement revisions, and a full list of unresolved questions.
 
 ---
 
 ## 1. Stakeholder & Context Corrections 
 
-The initial system boundary and stakeholder map omitted critical organizational complexities. The following **two** major corrections were applied:
+The initial system boundary and stakeholder map omitted important organizational details. The following two major corrections were applied:
 
 1. **Addition of Privacy & Legal Compliance Officer (MFIPPA / IPC):**
    - *Correction:* Formally added to the stakeholder map. The initial model treated claimant data (names, IDs, phone numbers) as standard inventory data. The correction acknowledges that the system must comply with the Municipal Freedom of Information and Protection of Privacy Act (MFIPPA), requiring automated data anonymization and strict retention periods for PII.
@@ -28,7 +28,7 @@ All claims within Sprint 0 were audited to separate documented evidence from ana
 | **1** | *"Items found on transit vehicles take 24 to 48 hours to reach the central Lost Articles Office."* | None | **Documented / Public Evidence** | *Retained as evidence:* TTC public documentation establishes a 24–48 hour transit logistics delay for physical collection and sorting. |
 | **2** | *"Unclaimed items are retained for exactly 90 days before auction or donation."* | None | **Documented / Public Evidence** | *Retained as evidence:* Mandated by City of Toronto Municipal Code and published TTC bylaws. |
 | **3** | *"Automated multi-attribute matching will reduce staff manual claim review workload by 60%."* | Presented assumption as a fact | **Analogy & Simulation** | **Rewritten:** *"Based on analogies with airline baggage reconciliation, we hypothesize a 60% manual workload reduction."* |
-| **4** | *"Transit operators will log found items using their personal mobile devices before ending their shifts."* | Unvalidated operational guess | **Assumption** | **Rewritten:** *"We assume operators can access mobile terminals to submit intake logs at shift end; operational feasibility remain unverified assumptions."* |
+| **4** | *"Transit operators will log found items using their personal mobile devices before ending their shifts."* | Unvalidated operational guess | **Assumption** | **Rewritten:** *"We assume operators can access mobile terminals to submit intake logs at shift end; operational feasibility remains an unverified assumption."* |
 | **5** | *"Transit fleet schedules can be queried in real time to match passenger travel dates with specific vehicles."* | None | **Direct / Public Evidence** | *Retained as evidence:* Validated against published Open Transit GTFS-RT API documentation. |
 | **6** | *"Passengers can accurately report the exact timestamp (within 5 minutes) of when they lost an item."* | Unvalidated human behavior | **Assumption** | **Rewritten:** *"While the system accepts precise timestamps, we must assume that passengers often only know a generalized time window (e.g., a 2-hour range) for when an item was lost."* |
 
@@ -36,7 +36,7 @@ All claims within Sprint 0 were audited to separate documented evidence from ana
 
 ## 3. Candidate-Requirement Revisions
 
-The following seven candidate requirements were rewritten to resolve critical issues of atomicity, clarity, scope, premature design, and operational triage prioritization.
+The following seven candidate requirements were rewritten to resolve issues of atomicity, clarity, scope, premature design, and operational triage prioritization.
 
 ### Revision 1: R5 – Online Lost-Item Submission (Resolved Atomicity)
 - **Before:** *"The system shall provide an online form allowing passengers to submit lost reports with category, brand, photos, automatically generate a tracking number, and send an email receipt."*
@@ -69,10 +69,10 @@ The following seven candidate requirements were rewritten to resolve critical is
 - **After (Privacy-Bounded):** *"The system shall publish a searchable catalog of found items that explicitly redacts uniquely identifying features (e.g., serial numbers, custom engravings, detailed contents) to prevent fraudulent claims."*
 
 ### Revision 7: R3 / R8 – Priority Categorization for Urgent Property (Resolved Scope & Operational Triage)
-- **Before (Uniform Treatment / Scope Blindspot):** *"The system shall queue all lost-item reports and found-item records in a single standard FIFO verification pipeline regardless of item category or urgency."*
+- **Before (Uniform Treatment / Scope Blindspot):** *"The system shall queue all lost-item reports and found-item records regardless of item category or urgency."*
 - **After (Differentiated Priority & Triage):**
   - **R3.1 (Urgent Property Classification):** *"The system shall categorize high-impact personal essentials (e.g., smartphones, laptops, medical devices, government-issued IDs, wallets) as high-priority items upon intake or loss reporting."*
-  - **R3.2 (Expedited Verification Triage):** *"The system shall prioritize high-priority items at the top of staff verification queues and trigger rapid matching alerts to facilitate expedited recovery before standard 24–48 hour batch processing."*
+  - **R3.2 (Expedited Verification Triage):** *"The system shall prioritize high-priority items at the top of staff verification queues and trigger rapid matching alerts to speed up recovery before standard 24–48 hour batch processing."*
 
 
 ---
