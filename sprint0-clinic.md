@@ -74,8 +74,8 @@ The following six candidate requirements were rewritten to resolve critical issu
 
 1.  **Work Rules**: Does the Amalgamated Transit Union (ATU Local 113) collective agreement permit vehicle operators to log items on mobile devices during shift turnarounds, or must logging occur exclusively at depot desktop terminals?
 2. **Delivery Liability:** If a high-value item (e.g., laptop) is lost or damaged in transit by the third-party courier, who bears the legal and financial liability?
-4. **CAD/AVL Latency:** What is the exact API protocol and data refresh latency supported by the transit authority's internal vehicle dispatch system?
-5. **Station CSA Custody:** Do subway Station CSAs have secure lockboxes capable of holding large items (e.g., bicycles, large luggage) temporarily, or must such items bypass the booth?
-6. **Hazardous / Perishable Items:** What is the operational protocol and system disposition state for items deemed perishable (food) or hazardous (leaking batteries) upon intake?
-7. **Gateway Redundancy:** If the primary payment gateway is offline, what is the fallback mechanism for processing delivery fees?
-8. **AODA Accessibility:** What specific WCAG compliance level (e.g., AA or AAA) is mandated by the transit agency for the public-facing claimant portal under the Accessibility for Ontarians with Disabilities Act (AODA)?
+3. **CAD/AVL Latency:** What is the exact API protocol and data refresh latency supported by the transit authority's internal vehicle dispatch system?
+4. **Station CSA Custody:** Do subway Station CSAs have secure lockboxes capable of holding large items (e.g., bicycles, large luggage) temporarily, or must such items bypass the booth?
+5. **Hazardous / Perishable Items:** What is the operational protocol and system disposition state for items deemed perishable (food) or hazardous (leaking batteries) upon intake?
+6. **Gateway Redundancy:** If the primary payment gateway is offline, what is the fallback mechanism for processing delivery fees?
+7. **AODA Accessibility:** What specific WCAG compliance level (e.g., AA or AAA) is mandated by the transit agency for the public-facing claimant portal under the Accessibility for Ontarians with Disabilities Act (AODA)?
