@@ -14,9 +14,7 @@ The initial system boundary and stakeholder map omitted critical organizational 
 
 1. **Addition of Privacy & Legal Compliance Officer (MFIPPA / IPC):**
    - *Correction:* Formally added to the stakeholder map. The initial model treated claimant data (names, IDs, phone numbers) as standard inventory data. The correction acknowledges that the system must comply with the Municipal Freedom of Information and Protection of Privacy Act (MFIPPA), requiring automated data anonymization and strict retention periods for PII.
-2. **Integration of Law Enforcement (TPS Property Bureau) for Contraband:**
-   - *Correction:* Added Law Enforcement as an external stakeholder. The initial scope assumed all found items followed a standard 90-day retention and public listing cycle. The correction recognizes that weapons, narcotics, and suspected stolen property require an immediate, distinct chain-of-custody transfer to police, bypassing the public catalog entirely.
-3. **Addition of Station Customer Service Agents (CSAs) as Intermediate Custodians:**
+2. **Addition of Station Customer Service Agents (CSAs) as Intermediate Custodians:**
    - *Correction:* The original model assumed items jumped directly from "Found by Passenger/Operator" to "Central Staff at Bay Station". The correction adds Station CSAs at fare booths as frontline intake points, requiring the system to handle intermediate, temporary custody logs before physical courier transport to the central hub.
 
 ---
